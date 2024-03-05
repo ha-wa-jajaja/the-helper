@@ -10,8 +10,18 @@ const Weather = () => {
             await response.json();
         console.log(weatherData);
     }
+
+    async function getBike() {
+        // https://data.taipei/dataset/detail?id=c6bc8aed-557d-41d5-bfb1-8da24f78f2fb
+        const response = await fetch(
+            "        https://tcgbusfs.blob.core.windows.net/dotapp/youbike/v2/youbike_immediate.json"
+        );
+        const bikeData = await response.json();
+        console.log(bikeData);
+    }
+
     useEffect(() => {
-        getWeather();
+        getBike();
     }, []);
     return (
         <section>
