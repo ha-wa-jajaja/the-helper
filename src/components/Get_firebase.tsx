@@ -19,6 +19,7 @@ const Get_Firebase = () => {
         fireStore,
         "places"
     );
+
     const getPlaces = async () => {
         try {
             const data = await getDocs(placesCollectionRef);
@@ -33,7 +34,9 @@ const Get_Firebase = () => {
         }
     };
 
-    return <section></section>;
+    return <section>
+        <div></div>
+    </section>;
 };
 
 export default Get_Firebase;
